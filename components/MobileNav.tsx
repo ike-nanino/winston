@@ -29,8 +29,8 @@ const links = [
     },
 
     {
-        name: 'CONTACT',
-        path: '/contact',
+        name: 'PERSPECTIVES',
+        path: '/perspectives',
     }, 
     
 ]
@@ -57,11 +57,11 @@ function MobileNav() {
         side="left"
         className="flex flex-col bg-white border-none shadow-none w-[280px] h-screen"
       >
-        <SheetTitle className="sr-only text-madder">
+        <SheetTitle className="text-madder mx-auto mt-5">
           Wiston & Co.
         </SheetTitle>
 
-        <nav className="flex flex-col justify-center items-center gap-8">
+        <nav className="flex flex-col justify-center items-center gap-8 my-auto">
           {links.map((link, index) => {
             return (
               <Link
@@ -76,7 +76,15 @@ function MobileNav() {
               </Link>
             );
           })}
+
         </nav>
+        <div className="flex justify-center items-center mb-8">
+          <Link href="/contact">
+            <button className="px-4 py-2 bg-madder text-white rounded hover:bg-gold/70 transition">
+              Contact Us
+            </button>
+          </Link>
+        </div>
       </SheetContent>
     </Sheet>
   );

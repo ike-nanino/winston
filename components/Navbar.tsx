@@ -25,8 +25,8 @@ const links = [
         path: '/attorneys',
     },
     {
-        name: 'CONTACT',
-        path: '/contact',
+        name: 'PERSPECTIVES',
+        path: '/perspectives',
     }, 
     
 ]

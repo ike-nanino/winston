@@ -6,42 +6,67 @@ import Image from "next/image"
 
 const practiceAreas = [
   {
-    title: "Employment",
-    description:
-      "Small-business representation and HR consultation with a national reach. Includes 24/7 access to online attorneys, litigation defense for employee claims, and an online library of forms, checklists and FAQs.",
-    image: "/images/employment.jpg",
-  },
-  {
-    title: "Commercial Collections",
-    description:
-      "Our in-house debt collection team assists clients with a broad range of matters, including creditor remedies, global representation, litigation, bankruptcy, credit remedy enforcement and counter claim defense.",
-    image: "/images/commercial.jpg",
-  },
-  {
-    title: "Construction",
-    description:
-      "With decades of construction law experience behind us, we assist companies with litigation, contract review and negotiation, lien and bond issues, project risk analysis, troubled-project resolution and more.",
-    image: "/images/construction.jpg",
-  },
-  {
     title: "Litigation",
     description:
-      "Our dedicated and experienced litigators represent small, mid-size and large corporations nationally in state, federal and bankruptcy court; they also handle mediation and arbitration proceedings.",
-    image: "/images/litigation.jpg",
+      "We provide aggressive and strategic representation in civil and commercial litigation matters, guiding clients through complex disputes in courts at all levels.",
+    image: "/images/first.jpg",
   },
   {
-    title: "Business",
+    title: "Arbitration",
     description:
-      "Whether you're just starting as an LLC or an established corporation, we assist with disputes, employment claims, business sales, franchises, and more — supporting you from formation to windup.",
-    image: "/images/business.jpg",
+      "Our arbitration team resolves conflicts efficiently outside of court, offering neutral, binding solutions in commercial, labor, and cross-border disputes.",
+    image: "/images/arbitary.jpg",
   },
   {
-    title: "Personal",
+    title: "Corporate",
     description:
-      "We offer 24/7 legal advice and litigation for individuals and families in MN, ND, SD and WI; including family law, workplace injuries, wrongful death, insurance claims and criminal matters.",
-    image: "/images/personal.jpg",
+      "From business formation to governance and compliance, we provide end-to-end legal support tailored to meet the evolving needs of corporations and startups alike.",
+    image: "/images/corporate.jpg",
+  },
+  {
+    title: "Commercial",
+    description:
+      "We assist with all facets of commercial transactions, including contract negotiation, regulatory compliance, and risk mitigation for businesses of all sizes.",
+    image: "/images/commerciallaw.jpg",
+  },
+  {
+    title: "Real Estate",
+    description:
+      "Whether buying, selling, leasing, or developing, we provide trusted legal advice in real estate transactions, due diligence, zoning, and property rights.",
+    image: "/images/realestate.jpg",
+  },
+  {
+    title: "Property and Conveyance",
+    description:
+      "Our conveyancing lawyers handle title transfers, registration, land documentation, and ensure all property transactions are secure, valid, and enforceable.",
+    image: "/images/property.jpg",
+  },
+  {
+    title: "Family Law",
+    description:
+      "We offer compassionate yet firm legal support for divorce, custody, adoption, maintenance, and related family matters — with a focus on protecting your rights and peace of mind.",
+    image: "/images/familylaw.jpg",
+  },
+  {
+    title: "Debt Recovery",
+    description:
+      "Our firm helps clients recover outstanding debts through letters of demand, litigation, and asset tracing, ensuring compliance with debt collection laws.",
+    image: "/images/debtrecovery.jpg",
+  },
+  {
+    title: "Banking",
+    description:
+      "We advise financial institutions and borrowers on lending, regulatory matters, compliance, and structuring of complex financial transactions.",
+    image: "/images/banking.jpg",
+  },
+  {
+    title: "Insurance",
+    description:
+      "Our insurance practice covers policy drafting, claims management, subrogation, and regulatory compliance for insurers, brokers, and policyholders.",
+    image: "/images/insurance.jpg",
   },
 ]
+
 
 
 
@@ -140,12 +165,12 @@ function PracticeAreas() {
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-6">
             While we offer all the capabilities you'd expect of an established
-            law firm, WFJ also provides innovative, personalized services that
+            law firm, Winston & Co also provides innovative, personalized services that
             evolve with your business and personal needs.
           </p>
           <a
             href="#"
-            className="inline-block bg-[rgb(163,122,45)] text-white px-6 py-3 rounded-md font-semibold hover:bg-[rgb(143,102,25)] transition"
+            className="inline-block bg-madder text-white px-6 py-3 rounded-md font-semibold hover:bg-madder/80 transition"
           >
             Schedule a Consultation
           </a>

@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="text-madder font-semibold uppercase mb-4">Address</h3>
             <p>WINSTON & CO</p>
             <p>3RD DADE LINK, CANTONMENTS ACCRA</p>
-            <p className="mt-4">INFO@WINSTON&CO.COM</p>
+            <p className="mt-4">INFO@WINSTONCO.COM</p>
             <a href="tel:+233504375771">+233 504 375 771</a>
           </div>
   
