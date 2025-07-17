@@ -55,13 +55,13 @@ function MobileNav() {
       </SheetTrigger>
       <SheetContent
         side="left"
-        className="flex flex-col bg-white border-none shadow-none w-[280px] h-screen"
+        className="flex flex-col justify-between bg-white border-none shadow-none w-[280px] h-screen"
       >
         <SheetTitle className="text-madder mx-auto mt-5">
           Wiston & Co.
         </SheetTitle>
 
-        <nav className="flex flex-col justify-center items-center gap-8 my-auto">
+        <nav className="flex flex-col justify-center items-center gap-8">
           {links.map((link, index) => {
             return (
               <Link
