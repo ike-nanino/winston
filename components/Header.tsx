@@ -21,7 +21,7 @@ function Header() {
         <PhoneTab />
       </div>
       <div className="lg:flex items-center justify-between hidden ">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-between flex-1 mr-14">
           <Image
             src="/images/winston&co.png"
             width={160}
