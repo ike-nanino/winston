@@ -23,6 +23,10 @@ const links = [
         name: 'PRACTICE AREAS',
         path: '/practice-areas',
     },
+     {
+        name: 'ATTORNEYS',
+        path: '/attorneys',
+    },
 
     {
         name: 'CONTACT',

@@ -20,10 +20,10 @@ const links = [
         name: 'PRACTICE AREAS',
         path: '/practice-areas',
     },
-    // {
-    //     name: 'PUBLICATION',
-    //     path: '/publication',
-    // },
+    {
+        name: 'ATTORNEYS',
+        path: '/attorneys',
+    },
     {
         name: 'CONTACT',
         path: '/contact',
