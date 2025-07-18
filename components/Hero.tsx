@@ -13,7 +13,7 @@ function Hero() {
           <Link
           href='/about'
           >
-          <button className="bg-madder text-white text-xs py-3 px-6 rounded-md hover:bg-opacity-90 font-trajanPro">
+          <button className="bg-madder text-white text-xs py-3 px-6 rounded-md hover:bg-opacity-90 font-trajanPro cursor-pointer">
             Learn More
           </button>
           </Link>

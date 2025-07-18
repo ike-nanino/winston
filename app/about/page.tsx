@@ -1,54 +1,50 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import { Briefcase, Eye, Compass, Handshake, Users, Search } from "lucide-react";
 
 export default function AboutUs() {
   return (
     <main className="bg-white text-gray-900">
       {/* Hero Section */}
-        <section
+      <section
         className="relative bg-cover bg-center h-[500px] md:h-[750px] lg:h-screen"
         style={{ backgroundImage: `url('/images/court.jpg')` }}
       >
         <div className="absolute inset-0 bg-black/80" />
-        <div className="absolute inset-0 left-6 md:left-[80px] right-0  lg:right-[686px] top-40 bottom-[120px] flex items-center">
+        <div className="absolute inset-0 left-6 md:left-[80px] right-0 lg:right-[686px] top-40 bottom-[120px] flex items-center">
           <div className="text-white text-start">
-            <h1 className="text-sm font-nespressoMed text-madder mb-4">
-              Who we are
-            </h1>
+            <h1 className="text-sm font-nespressoMed text-madder mb-4">Who we are</h1>
             <h1 className="text-xl lg:text-4xl font-normal font-trajanPro mb-4">
-              Winston & Co. is one of <br />
-              the leading law firms in Canada.
+              Winston & Co. is one of
+
+              <br /> the leading law firms in Canada.
             </h1>
             <p className="text-xs mb-8 font-nespresso">
-              One of Canada&apos;s prominent legal firms is Winston & Co. Since 2000,
-              the only purpose of our existence has been to provide high-quality
-              legal services to clients all over the world. Winston & Co. is
-              committed to providing business clients, including both people and
-              governmental organizations, with thoughtful legal solutions that
-              cut across disciplines, industries, and sectors.
+              One of Canada's prominent legal firms is Winston & Co. Since 2000, the only purpose of our existence has been to provide high-quality legal services to clients all over the world. Winston & Co. is committed to providing business clients, including both people and governmental organizations, with thoughtful legal solutions that cut across disciplines, industries, and sectors.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Mission and Values */}
+      {/* Mission & Representation */}
       <section className="py-20 px-6 md:px-16 lg:px-32 bg-gray-50">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-semibold mb-4">Our Mission</h2>
+            <h2 className="text-3xl font-semibold mb-4">Comprehensive Representation</h2>
             <p className="text-lg">
-              At Winston & Co., we navigate complexity and deliver solutions that empower clients worldwide. Our lawyers guide clients through their most important challenges, with insight, precision and care.
+              Our employment law team at Winston & Co. brings diverse talent and experience
+              to fully represent your legal needs. From complex litigation to strategic counseling,
+              we are committed to standing beside our clients every step of the way.
             </p>
           </div>
           <div>
-            <h2 className="text-3xl font-semibold mb-4">Our Core Values</h2>
-            <ul className="list-disc list-inside space-y-2 text-lg">
-              <li><strong>Pioneering:</strong> We embrace innovation and adapt boldly.</li>
-              <li><strong>United:</strong> We act as one integrated, collaborative firm.</li>
-              <li><strong>Human:</strong> We prioritize people and community impact.</li>
-            </ul>
+            <h2 className="text-3xl font-semibold mb-4">Clear Legal Guidance</h2>
+            <p className="text-lg">
+              We help clients navigate their rights, assess legal options, and execute informed strategies.
+              Whether facing a workplace issue, contract dispute, or policy compliance matter, we are here
+              to guide you through with confidence.
+            </p>
           </div>
         </div>
       </section>
@@ -58,78 +54,84 @@ export default function AboutUs() {
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-12">Our Client Service Principles</h2>
           <div className="grid md:grid-cols-2 gap-12 text-left">
-            <ul className="space-y-4 text-lg">
-              <li>🌍 <strong>One Global Team:</strong> Seamless service across borders and disciplines.</li>
-              <li>🔍 <strong>Clarity & Judgment:</strong> Commercially grounded legal advice.</li>
-              <li>🧭 <strong>Strategic Navigation:</strong> Agile, inventive solutions in complex environments.</li>
+            <ul className="space-y-6 text-lg">
+              <li className="flex gap-3 items-start">
+                <Briefcase className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Deliver One Firm:</strong> Integrated teams providing high-quality legal work across all regions.
+                </span>
+              </li>
+              <li className="flex gap-3 items-start">
+                <Eye className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Keep an Eye on the Big Picture:</strong> Global insight with local expertise to resolve complex challenges.
+                </span>
+              </li>
+              <li className="flex gap-3 items-start">
+                <Search className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Provide Clarity & Judgment:</strong> Practical advice rooted in your unique business context.
+                </span>
+              </li>
             </ul>
-            <ul className="space-y-4 text-lg">
-              <li>👞 <strong>Client Empathy:</strong> We step into our clients’ shoes.</li>
-              <li>🤝 <strong>Relationship Driven:</strong> Built on trust, integrity and long-term success.</li>
-              <li>💡 <strong>Forward Thinking:</strong> Anticipating tomorrow’s challenges today.</li>
+            <ul className="space-y-6 text-lg">
+              <li className="flex gap-3 items-start">
+                <Compass className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Find a Way Through:</strong> Inventive and agile strategies for today’s legal landscape.
+                </span>
+              </li>
+              <li className="flex gap-3 items-start">
+                <Users className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Step into Our Clients' Shoes:</strong> Client-first mentality with empathy and care.
+                </span>
+              </li>
+              <li className="flex gap-3 items-start">
+                <Handshake className="w-6 h-6 text-madder" />
+                <span>
+                  <strong>Build Lasting Relationships:</strong> Anticipating client needs and fostering trusted partnerships.
+                </span>
+              </li>
             </ul>
           </div>
         </div>
       </section>
 
-      {/* Innovation Section */}
-      <section className="py-20 bg-[#f9fafb] px-6 md:px-16 lg:px-32">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Innovation in Action</h2>
-          <p className="text-lg max-w-3xl mx-auto mb-10">
-            We integrate legal technology, knowledge management and AI-driven strategies to streamline legal processes and provide real business value.
-          </p>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">AI Legal Research</h3>
-              <p>Faster, smarter document reviews and due diligence using machine learning.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Custom Client Portals</h3>
-              <p>Collaborative dashboards for real-time updates and transparency.</p>
-            </div>
-            <div className="bg-white p-6 rounded-xl shadow-md">
-              <h3 className="text-xl font-semibold mb-2">Tech Consulting</h3>
-              <p>Legal tech strategy sessions tailored to client needs and industries.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Engagement & Development */}
-      <section className="py-20 px-6 md:px-16 lg:px-32">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-6">Engagement & Development</h2>
-          <p className="text-lg max-w-3xl mx-auto">
-            We foster a respectful, supportive workplace where people thrive and grow. From professional development and mentoring to global affinity networks, we ensure everyone feels seen and supported.
-          </p>
-        </div>
-      </section>
-
-      {/* Affinity Networks */}
-      <section className="py-20 bg-gray-50 px-6 md:px-16 lg:px-32">
+      {/* Our Timeline */}
+      <section className="py-20 bg-gray-100 px-6 md:px-16 lg:px-32">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Global Affinity Networks</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg">
-            {[
-              "Asian Network",
-              "Jewish Network",
-              "Black Network",
-              "LGBTQ+ Spectrum",
-              "Neurodiversity - Beyond Barriers",
-              "Middle Eastern & North African",
-              "Hispanic & Latinx - Alianza",
-              "Women’s Network"
-            ].map((network, i) => (
-              <motion.div
-                key={i}
-                whileHover={{ scale: 1.05 }}
-                className="bg-white p-5 rounded-lg shadow-md"
-              >
-                {network}
-              </motion.div>
-            ))}
+          <h2 className="text-3xl font-bold mb-12 text-center">A Legacy of Excellence</h2>
+          <div className="border-l-4 border-madder pl-6 space-y-10">
+            <div>
+              <h3 className="text-xl font-semibold">2000</h3>
+              <p>Founded with a mission to champion employment law and client advocacy.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">2008</h3>
+              <p>Expanded practice nationally to cover broader corporate and labor law issues.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">2015</h3>
+              <p>Recognized as a top-tier law firm in workplace litigation and advisory services.</p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold">2024</h3>
+              <p>Launched cross-functional teams to support a diverse client base across industries.</p>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-20 px-6 md:px-16 lg:px-32">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">Why Winston & Co.</h2>
+          <p className="text-lg max-w-4xl mx-auto mb-10">
+            Our combination of seasoned attorneys, tailored legal strategies, and an unwavering
+            commitment to our clients' best interests sets us apart. We're proud to lead with clarity,
+            conviction, and compassion.
+          </p>
         </div>
       </section>
 
@@ -137,10 +139,10 @@ export default function AboutUs() {
       <section className="py-20 px-6 md:px-16 lg:px-32 bg-madder text-white text-center">
         <h2 className="text-3xl font-bold mb-4">Work With Us</h2>
         <p className="text-lg max-w-xl mx-auto mb-6">
-          Ready to navigate complex legal challenges with a trusted global team?
+          Need expert legal guidance in employment law or beyond? Connect with a team that’s invested in your success.
         </p>
         <button className="px-6 py-3 bg-white text-[#0f172a] font-semibold rounded-full hover:bg-gray-200 transition">
-          Get in Touch
+          Contact Us
         </button>
       </section>
     </main>
