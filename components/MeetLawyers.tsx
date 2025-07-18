@@ -10,14 +10,17 @@ function MeetLawyers() {
             <h1 className="mb-8 font-trajanPro text-xl md:text-3xl font-medium text-card-foreground">
                 Experienced Attorneys With <span className='text-madder'>Over 20 Years of Practice.</span> 
             </h1>
-            <p className='text-white'>
+            <p className='text-gray-500 text-sm md:text-base'>
                 Our team of experienced attorneys is dedicated to providing high-quality legal services across various practice areas, including litigation, corporate law, family law, and more.
             </p>
             </div>
         </div>
 
+<div className="px-4 lg:px-10">
 
-        <GridLawyers />
+        <GridLawyers  />
+</div>
+
 
 
         <div className="flex justify-center items-center py-10">
