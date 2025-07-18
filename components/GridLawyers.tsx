@@ -9,7 +9,7 @@ export default function GridLawyers() {
       id: '01',
       title: 'Roof Replacement',
       description: 'All our roof replacements are done using high-end fiberglass laminated shingles and a full system install as per manufacturer specifications.',
-      bgImage: '/images/man9.jpg',
+      bgImage: '/images/man111.jpg',
     },
     {
       id: '02',
@@ -19,15 +19,15 @@ export default function GridLawyers() {
     },
     {
       id: '03',
-      title: 'Roof Inspection',
+      title: 'Anthony Shaw',
       description: 'Professional roof inspections to identify potential issues before they become costly problems, ensuring the longevity of your roof system.',
       bgImage: '/images/man4.jpg',
     },
     {
       id: '04',
-      title: 'Gutter Installation',
+      title: 'Randy Fay',
       description: 'Complete gutter systems installed to protect your home from water damage, with quality materials and professional installation techniques.',
-      bgImage: '/images/man6.jpg',
+      bgImage: '/images/randy.png',
     },
   ];
 
@@ -70,9 +70,7 @@ function Card({ card }) {
       <div className="absolute inset-0 p-6 flex flex-col opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <h1 className="mb-6 text-lg font-bold text-white">{card.title}</h1>
         <p className="mb-10 text-white">{card.description}</p>
-        <div className="flex items-center justify-between mt-auto">
-          <h1 className="text-xl font-bold text-white">{card.id}</h1>
-        </div>
+
       </div>
     </div>
   );

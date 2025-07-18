@@ -19,10 +19,10 @@ export default function AboutUs() {
             </h1>
             <h1 className="text-xl lg:text-4xl font-normal font-trajanPro mb-4">
               Winston & Co. is one of <br />
-              the leading law firms in USA.
+              the leading law firms in Canada.
             </h1>
             <p className="text-xs mb-8 font-nespresso">
-              One of USA&apos;s prominent legal firms is Winston & Co. Since 2000,
+              One of Canada&apos;s prominent legal firms is Winston & Co. Since 2000,
               the only purpose of our existence has been to provide high-quality
               legal services to clients all over the world. Winston & Co. is
               committed to providing business clients, including both people and

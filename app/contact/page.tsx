@@ -181,6 +181,7 @@ const ContactPage = () => {
     setFormData({ ...formData, service: value });
   };
 
+
   // Animation refs
   const heroRef = useRef(null);
   const isHeroInView = useInView(heroRef, { once: true });
@@ -219,12 +220,12 @@ const ContactPage = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: translations.info.addressTitle,
-      content: "233 E Redwood St Suite 800, Baltimore, MD 21202"
+      content: "175 Bloor Street East Suite 302 South Tower Toronto"
     },
     {
       icon: <Phone className="h-6 w-6" />,
       title: translations.info.phoneTitle,
-      content: "(443) 781-2428"
+      content: "(909) 266 7028"
     },
     {
       icon: <Mail className="h-6 w-6" />,
@@ -411,26 +412,6 @@ const ContactPage = () => {
                     )}
                   />
                   
-                  <FormField
-                    control={form.control}
-                    name="consent"
-                    render={({ field }) => (
-                      <FormItem className="flex items-center space-x-3 space-y-0">
-                        <FormControl>
-                          <Checkbox
-                            checked={field.value}
-                            onCheckedChange={field.onChange}
-                          />
-                        </FormControl>
-                        <div className="space-y-1 leading-none">
-                          <FormLabel>
-                            I consent to the privacy policy and terms of service
-                          </FormLabel>
-                        </div>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
                   
                   <Button 
                     type="submit" 
@@ -439,6 +420,8 @@ const ContactPage = () => {
                   >
                     {isSubmitting ? "Sending..." : translations.form.submitButton}
                   </Button>
+
+                  {success && <p className="text-green-500">Your message has been sent successfully!</p>}
                 </form>
               </Form>
             </motion.div>
@@ -476,16 +459,7 @@ const ContactPage = () => {
                   </motion.div>
                 ))}
               </motion.div>
-              
-              {/* Map Placeholder */}
-              <motion.div 
-                className="bg-gray-200 rounded-lg overflow-hidden h-80"
-                variants={fadeInUp}
-              >
-                <div className="w-full h-full flex items-center justify-center text-gray-500">
-                  Map would appear here
-                </div>
-              </motion.div>
+           
             </motion.div>
           </div>
         </div>
