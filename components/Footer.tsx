@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link'
 
 
@@ -46,7 +47,14 @@ export default function Footer() {
         </div>
   
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 mt-12 pt-6 text-center">
+        <div className="border-t border-gray-700 mt-12 pt-6 flex text-center mx-auto">
+            <Image
+                      src="/images/winston2i.png"
+                      width={20}
+                      height={20}
+                      alt="logo"
+                      className="object-cover mr-3"
+                    />
           <p>Copyright (2025) © Winston & Co </p>
         </div>
       </footer>
