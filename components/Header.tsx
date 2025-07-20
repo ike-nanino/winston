@@ -10,6 +10,7 @@ function Header() {
     <header className="bg-card-foreground p-4 text-white sticky top-0 left-0 right-0 z-50 h-16 lg:h-20">
       <div className="lg:hidden flex items-center justify-between">
         <MobileNav />
+        
 
         <Image
           src="/images/winston&co.png"
@@ -23,6 +24,16 @@ function Header() {
       </div>
       <div className="lg:flex items-center justify-between hidden ">
         <div className="flex items-center justify-between flex-1 mr-14">
+
+          <div className="flex items-center">
+
+             <Image
+            src="/images/winston2i.png"
+            width={42}
+            height={42}
+            alt="logo"
+            className="object-cover mr-3"
+          />
           <Image
             src="/images/winston&co.png"
             width={160}
@@ -30,6 +41,9 @@ function Header() {
             alt="logo"
             className="object-cover mr-16"
           />
+
+          </div>
+         
 
           <div className="hidden lg:flex">
             <Navbar />

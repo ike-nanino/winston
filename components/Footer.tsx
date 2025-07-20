@@ -10,8 +10,8 @@ export default function Footer() {
             <h3 className="text-madder font-semibold uppercase mb-4">Address</h3>
             <p>WINSTON & CO.</p>
             <p>175 Bloor Street East Suite 302 South Tower Toronto</p>
-            <p className="mt-4">INFO@WINSTONCO.COM</p>
-            <a href="tel:+19092667028">(909) 266 7028</a>
+            <p className="mt-4">INFO@WINSTONCOFIRM.COM</p>
+            <a href="tel:+19092667028">(929) 266 7028</a>
           </div>
   
           {/* Services Section */}

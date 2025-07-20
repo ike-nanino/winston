@@ -81,7 +81,7 @@ function MobileNav() {
             );
           })}
 
-            <Link href="/contact">
+            <Link href="/contact" onClick={handleLinkClick}>
             <button className="px-4 py-2 bg-madder text-white rounded hover:bg-madder/70 transition">
               Contact Us
             </button>

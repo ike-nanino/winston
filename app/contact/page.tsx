@@ -227,7 +227,7 @@ const ContactPage = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: translations.info.phoneTitle,
-      content: "(909) 266 7028"
+      content: "(929) 266 7028"
     },
     {
       icon: <Mail className="h-6 w-6" />,
