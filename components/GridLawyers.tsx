@@ -7,20 +7,20 @@ export default function GridLawyers() {
   const cards = [
     {
       id: '01',
-      title: 'Roof Replacement',
-      description: 'All our roof replacements are done using high-end fiberglass laminated shingles and a full system install as per manufacturer specifications.',
+      title: 'Omar patel',
+      description: '',
       bgImage: '/images/man111.jpg',
     },
     {
       id: '02',
-      title: 'Roof Repairs',
-      description: 'Our experienced team can handle all types of roof repairs, from minor leaks to major structural issues, with quality materials and expert workmanship.',
+      title: 'Samantha Grant',
+      description: '',
       bgImage: '/images/woman2.jpg',
     },
     {
       id: '03',
       title: 'Anthony Shaw',
-      description: 'Professional roof inspections to identify potential issues before they become costly problems, ensuring the longevity of your roof system.',
+      description: '',
       bgImage: '/images/man4.jpg',
     },
     {

@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
 import PhoneTab from "./PhoneTab";
+import Link from "next/link";
 
 function Header() {
   return (
@@ -36,7 +37,10 @@ function Header() {
         </div>
 
         <div className="bg-madder hidden lg:flex p-2 mr-2 cursor-pointer font-trajanPro text-xs">
+          <Link href="/contact">
+          
           CONTACT
+          </Link>
         </div>
       </div>
     </header>

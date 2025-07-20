@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-      <footer className="bg-card-foreground text-gray-200 py-12">
+      <footer className="bg-card-foreground text-gray-200 py-12 px-6">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 text-center lg:text-left">
           {/* Address Section */}
           <div>
@@ -36,7 +36,7 @@ export default function Footer() {
               <Link
               href='/contact'
               >
-              <button className="px-4 py-2 bg-madder text-white rounded hover:bg-gold/70 transition">
+              <button className="px-4 py-2 bg-madder text-white rounded hover:bg-gold/70 transition cursor-pointer">
                 Contact Us
               </button>
               </Link>
