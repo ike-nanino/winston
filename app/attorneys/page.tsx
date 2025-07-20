@@ -24,7 +24,7 @@ const allLawyers: Lawyer[] = [
     position: "Senior Employment Attorney",
     email: "darrengibs.morganass@outlook.com",
     phone: "(555) 123-4567",
-    image: "/images/timothy.png",
+    image: "/images/timothy.jpg",
     specialties: ["Employment Law", "Workplace Disputes"],
     education: ["J.D., Harvard Law School", "B.A., Yale University"],
     bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
@@ -35,7 +35,7 @@ const allLawyers: Lawyer[] = [
     position: "Corporate and Business Lawyer",
     email: "rebecca@morganassociates.com",
     phone: "(555) 123-4568",
-    image: "/images/boodhoo.png",
+    image: "/images/boodhoo.jpg",
     specialties: ["Business Law", "Contracts", "Mergers & Acquisitions"],
     education: ["J.D., Stanford Law School", "B.S., University of Michigan"],
     bio: "Rebecca provides strategic legal guidance to businesses in complex transactions.",
@@ -96,7 +96,7 @@ const allLawyers: Lawyer[] = [
     position: "Corporate and Real Estate Lawyer",
     email: "daniel.fraser@winstonlaw.ca",
     phone: "(905) 555-2233",
-    image: "/images/randy.png",
+    image: "/images/randy.jpg",
     specialties: ["Corporate", "Real Estate", "Commercial Law"],
     education: [
       "J.D., Osgoode Hall Law School",
@@ -146,7 +146,7 @@ const allLawyers: Lawyer[] = [
     position: "Litigation & Corporate Advisor",
     email: "david.chin@winstonlaw.ca",
     phone: "(519) 555-3020",
-    image: "/images/beaudie.png",
+    image: "/images/beaudie.jpg",
     specialties: ["Litigation", "Corporate", "Arbitration"],
     education: [
       "J.D., University of Alberta",
@@ -171,7 +171,7 @@ const allLawyers: Lawyer[] = [
     position: "Senior Employment Attorney",
     email: "darrengibs.morganass@outlook.com",
     phone: "(555) 123-4567",
-    image: "/images/bruce.png",
+    image: "/images/bruce.jpg",
     specialties: ["Employment Law", "Workplace Disputes"],
     education: ["J.D., Harvard Law School", "B.A., Yale University"],
     bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
@@ -407,7 +407,7 @@ export default function LawyersPage() {
                   </ul>
                 </div>
 
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <p>
                     📧{" "}
                     <a
@@ -418,7 +418,7 @@ export default function LawyersPage() {
                     </a>
                   </p>
                   <p>📞 {selectedLawyer.phone}</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </motion.div>

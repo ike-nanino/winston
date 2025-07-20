@@ -37,7 +37,7 @@ function PhoneTab() {
           
         </SheetTitle>
 
-        <div className="flex flex-col justify-center items-center mt-15 gap-8 text-gold font-semibold " onClick={handleLinkClick}>
+        <div className="flex flex-col justify-center text-madder items-center mt-15 gap-8 text-gold font-semibold " onClick={handleLinkClick}>
         <a href="tel:+19092667028">(909) 266 7028</a>
         </div>
 
