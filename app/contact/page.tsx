@@ -24,8 +24,9 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "sonner";
-import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Globe } from 'lucide-react';
 import Head from 'next/head';
+import Image from 'next/image';
 
 
 
@@ -237,7 +238,12 @@ const ContactPage = () => {
       icon: <Clock className="h-6 w-6" />,
       title: translations.info.hoursTitle,
       content: translations.info.hours
-    }
+    },
+    {
+    icon: <Globe className="h-6 w-6" />,
+    title: "Winston & CO. Law Firm",
+    content: "www.winstoncofirm.com"
+  }
   ];
 
   return (
@@ -468,8 +474,21 @@ const ContactPage = () => {
                   </motion.div>
                 ))}
               </motion.div>
+
+                          <div className="mt-12 flex justify-center">
+  <Image 
+    src="/images/canada.png" 
+    alt="Canada Map" 
+    width={200} 
+    height={100} 
+    className=""
+  />
+</div>
            
             </motion.div>
+
+
+
           </div>
         </div>
       </section>
