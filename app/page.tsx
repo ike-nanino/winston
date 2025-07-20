@@ -5,7 +5,7 @@ import Services from "@/components/Services";
 import StatsSection from "@/components/StatsSection";
 
 export const metadata = {
-  title: 'Winston & Co. | Trusted Canadian Law Firm',
+  title: 'Winston & Co. | Canadian Law Firm',
   description: '...',
 
   other: {
