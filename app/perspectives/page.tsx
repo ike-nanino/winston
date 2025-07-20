@@ -1,4 +1,9 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Perspectives',
+  description: 'Explore our insights and articles on various legal topics, providing valuable information for businesses and individuals.',
+};
 
 function Perspectives() {
   return (

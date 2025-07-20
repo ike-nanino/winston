@@ -2,6 +2,10 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Head from "next/head";
+
+
+
 
 
 const practiceAreas = [
@@ -72,6 +76,14 @@ const practiceAreas = [
 
 function PracticeAreas() {
   return (
+
+    <>
+       <Head>
+                  <title>Practice Areas</title>
+                  <meta name="description" content="Explore the diverse legal services offered by Winston & Co., including litigation, corporate law, family law, and more." />
+                </Head>
+    
+    
     <main>
         <section
         className="relative bg-cover bg-center h-[500px] md:h-[750px] lg:h-screen"
@@ -178,6 +190,8 @@ function PracticeAreas() {
       </section>
     </div>
     </main>
+
+    </>
   )
 }
 

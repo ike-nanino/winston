@@ -23,6 +23,10 @@ const links = [
         name: 'PRACTICE AREAS',
         path: '/practice-areas',
     },
+    {
+        name: 'PRO BONO',
+        path: '/pro-bono',
+    },
      {
         name: 'ATTORNEYS',
         path: '/attorneys',

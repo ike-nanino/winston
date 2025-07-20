@@ -1,10 +1,20 @@
-"use client";
 
-import { motion } from "framer-motion";
+
 import { Briefcase, Eye, Compass, Handshake, Users, Search } from "lucide-react";
+import { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Learn more about Winston & Co., a leading Canadian law firm offering exceptional legal services in employment law, litigation, and corporate legal advice.',
+};
+
+
 
 export default function AboutUs() {
   return (
+    
     <main className="bg-white text-gray-900">
       {/* Hero Section */}
       <section
@@ -122,6 +132,89 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
+      <section className="py-16 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div
+      
+      className="text-center mb-12"
+    >
+      <h2 className="text-3xl md:text-4xl font-bold mb-4 text-madder">Our History</h2>
+      <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+        From a small startup in Ontario to a leading innovator in the industry—here’s our journey through the years.
+      </p>
+    </div>
+
+    <div className="max-w-4xl mx-auto">
+      <div className="relative">
+        {/* Vertical line */}
+        <div className="absolute left-4 md:left-1/2 ml-0 md:-ml-1 top-0 h-full w-0.5 bg-madder/60"></div>
+
+        {[
+          {
+            year: '2000',
+            title: 'Founded in Ontario',
+            description: 'Our story began in a small office space in Ontario, Canada, with just three passionate entrepreneurs.',
+            image: '/images/insurance.jpg',
+          },
+          {
+            year: '2005',
+            title: 'First Major Client',
+            description: 'We secured our first major client, leading to a period of rapid growth and team expansion.',
+            image: '/images/insurance.jpg',
+          },
+          {
+            year: '2012',
+            title: 'New Headquarters',
+            description: 'Moved into a state-of-the-art headquarters in downtown Toronto, boosting collaboration and culture.',
+            image: '/images/history-2012.jpg',
+          },
+          {
+            year: '2024',
+            title: 'Innovation & Sustainability',
+            description: 'Launched cross-functional teams to support a diverse client base across industries.',
+            image: '/images/history-2024.jpg',
+          },
+        ].map((item, i) => (
+          <div
+            key={item.year}
+            className={`relative mb-16 flex flex-col ${
+              i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            }`}
+          >
+            {/* Year marker */}
+            <div className="absolute left-4 md:left-1/2 ml-0 md:-ml-4 top-0 h-8 w-8 rounded-full bg-madder border-4 border-white shadow-md flex items-center justify-center text-white font-bold text-xs z-10">
+              {item.year.slice(2)}
+            </div>
+
+            {/* Content */}
+            <div
+              className={`ml-12 md:ml-0 md:w-1/2 ${
+                i % 2 === 0 ? 'md:pr-12 text-right' : 'md:pl-12 text-left'
+              }`}
+            >
+              <div
+                className="bg-white p-5 rounded-lg shadow-md relative overflow-hidden"
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                }}
+              >
+                <div className="backdrop-blur-sm bg-white/80 p-4 rounded">
+                  <h3 className="text-xl font-bold text-madder mb-1">{item.title}</h3>
+                  <span className="block text-black font-medium mb-2">{item.year}</span>
+                  <p className="text-gray-700">{item.description}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
 
       {/* Why Choose Us */}
       <section className="py-20 px-6 md:px-16 lg:px-32">

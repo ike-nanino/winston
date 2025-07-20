@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useRef, useState } from 'react';
-import Image from 'next/image';
 import { motion, useInView } from 'framer-motion';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,8 +24,10 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { toast } from "sonner";
-import { Checkbox } from "@/components/ui/checkbox";
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import Head from 'next/head';
+
+
 
 const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -240,7 +241,15 @@ const ContactPage = () => {
   ];
 
   return (
+
+    <>
+    <Head>
+              <title>Contact Us</title>
+              <meta name="description" content="Get in touch with Winston & Co. for expert legal consultation and support." />
+            </Head>
+    
     <div className="min-h-screen bg-white text-gray-900">
+      
       {/* Hero Section */}
      <section
         className="relative bg-cover bg-center h-[500px] md:h-[750px] lg:h-screen"
@@ -467,6 +476,8 @@ const ContactPage = () => {
       
      
     </div>
+
+    </>
   );
 };
 

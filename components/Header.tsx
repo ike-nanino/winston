@@ -6,14 +6,14 @@ import PhoneTab from "./PhoneTab";
 
 function Header() {
   return (
-    <header className="bg-card-foreground text-white p-4 sticky top-0 left-0 right-0 z-50 h-16 lg:h-20">
+    <header className="bg-card-foreground p-4 text-white sticky top-0 left-0 right-0 z-50 h-16 lg:h-20">
       <div className="lg:hidden flex items-center justify-between">
         <MobileNav />
 
         <Image
           src="/images/winston&co.png"
           width={120}
-          height={120}
+          height={30}
           alt="logo"
           className="object-cover mr-4"
         />
@@ -25,7 +25,7 @@ function Header() {
           <Image
             src="/images/winston&co.png"
             width={160}
-            height={160}
+            height={42}
             alt="logo"
             className="object-cover mr-16"
           />

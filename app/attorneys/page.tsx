@@ -3,6 +3,9 @@
 import { useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import Head from "next/head";
+
+
 
 type Lawyer = {
   id: number
@@ -167,7 +170,12 @@ export default function LawyersPage() {
         )
 
   return (
-    <main>
+    <>
+
+    <Head>
+        <title>Our Attorneys</title>
+        <meta name="description" content="Meet our team of experienced attorneys at Winston & Co., specializing in various areas of law to serve your legal needs." />
+      </Head>
 
            {/* Hero Section */}
         <section
@@ -308,6 +316,6 @@ export default function LawyersPage() {
         </motion.div>
       )}
     </div>
-    </main> 
+    </> 
   )
 }
