@@ -27,7 +27,7 @@ export default function GridLawyers() {
       id: '04',
       title: 'Randy Fay',
       description: 'Complete gutter systems installed to protect your home from water damage, with quality materials and professional installation techniques.',
-      bgImage: '/images/randy.png',
+      bgImage: '/images/randy.jpg',
     },
   ];
 

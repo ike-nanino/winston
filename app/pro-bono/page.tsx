@@ -20,7 +20,26 @@ import { motion } from "framer-motion";
 
 export default function ProBonoPage() {
   return (
-    <section className="bg-white text-gray-800 py-16">
+    <main>
+
+       <section
+        className="relative bg-cover bg-center h-[500px] md:h-[750px] lg:h-screen"
+        style={{ backgroundImage: `url('/images/probono.jpg')` }}
+      >
+        <div className="absolute inset-0 bg-black/80" />
+        <div className="absolute inset-0 left-6 md:left-[80px] right-0  lg:right-[686px] top-40 bottom-[120px] flex items-center">
+          <div className="text-white text-start">
+            <h1 className="text-sm font-nespressoMed text-madder mb-4">
+              Pro Bono
+            </h1>
+            <h1 className="text-base lg:text-xl font-normal font-trajanPro mb-4">
+              At Winston & Co., we believe access to justice is a right—not a privilege. Our pro bono work is a reflection of our values, commitment to community, and passion for lasting impact.
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white text-gray-800 py-16">
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Intro */}
         <motion.div
@@ -30,9 +49,9 @@ export default function ProBonoPage() {
           variants={fadeIn}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Pro Bono Commitment</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-madder mb-4">Pro Bono Commitment</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            At Winston & Co., we believe access to justice is a right—not a privilege. Our pro bono work is a reflection of our values, commitment to community, and passion for lasting impact.
+            At Winston & Co., we believe access to justice is a right, not a privilege. Our pro bono work is a reflection of our values, commitment to community, and passion for lasting impact.
           </p>
         </motion.div>
 
@@ -58,9 +77,9 @@ export default function ProBonoPage() {
               whileInView="visible"
               viewport={{ once: true }}
               variants={fadeIn}
-              className="bg-blue-50 rounded-xl p-6 shadow-sm"
+              className="bg-white rounded-xl p-6 shadow-sm"
             >
-              <h3 className="text-2xl font-semibold text-blue-800 mb-2">{item.title}</h3>
+              <h3 className="text-2xl font-semibold text-madder mb-2">{item.title}</h3>
               <p className="text-gray-700">{item.desc}</p>
             </motion.div>
           ))}
@@ -75,7 +94,7 @@ export default function ProBonoPage() {
             variants={fadeIn}
             className="mb-10 text-center"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Changing Lives Through Law</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-madder mb-4">Changing Lives Through Law</h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto">
               Each year, Winston & Co. contributes hundreds of pro bono hours to advance justice, support equity, and empower underserved communities.
             </p>
@@ -86,22 +105,22 @@ export default function ProBonoPage() {
               {
                 title: "Equal Rights Cases",
                 desc: "We’ve proudly supported precedent-setting equality cases involving 2SLGBTQ+, Indigenous, and newcomer rights in Ontario.",
-                image: "/images/probono-rights.jpg",
+                image: "/images/equalrights.jpg",
               },
               {
                 title: "Youth & Education",
                 desc: "Partnering with youth shelters and nonprofits, our firm helps secure education access, housing, and legal protection for vulnerable minors.",
-                image: "/images/probono-youth.jpg",
+                image: "/images/youth.jpg",
               },
               {
                 title: "Grassroots Organizations",
                 desc: "From neighborhood legal clinics to international NGOs, our team advises on governance, compliance, and charitable structures.",
-                image: "/images/probono-grassroots.jpg",
+                image: "/images/grassroots.jpg",
               },
               {
                 title: "Access to Courts",
                 desc: "Through Ontario-based access initiatives, our lawyers support self-represented litigants and offer guidance in small claims and family courts.",
-                image: "/images/probono-courts.jpg",
+                image: "/images/canada.jpg",
               },
             ].map((item, i) => (
               <motion.div
@@ -117,7 +136,7 @@ export default function ProBonoPage() {
                   style={{ backgroundImage: `url(${item.image})` }}
                 />
                 <div className="p-5 bg-white">
-                  <h3 className="text-xl font-bold text-blue-800 mb-2">{item.title}</h3>
+                  <h3 className="text-xl font-bold text-madder mb-2">{item.title}</h3>
                   <p className="text-gray-700">{item.desc}</p>
                 </div>
               </motion.div>
@@ -132,7 +151,7 @@ export default function ProBonoPage() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 text-center"
+            className="text-3xl md:text-4xl font-bold text-madder mb-6 text-center"
           >
             Organizations We've Proudly Served
           </motion.h2>
@@ -166,8 +185,8 @@ export default function ProBonoPage() {
         </div>
 
         {/* Accolades */}
-        <div className="bg-blue-100 py-12 px-6 rounded-xl shadow-sm mb-20 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-4">
+        <div className="bg-madder/70 py-12 px-6 rounded-xl shadow-sm mb-20 text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold text-madder mb-4">
             Recognized for Excellence
           </h2>
           <p className="text-gray-800 max-w-3xl mx-auto">
@@ -187,5 +206,6 @@ export default function ProBonoPage() {
         </div>
       </div>
     </section>
+    </main>
   );
 }

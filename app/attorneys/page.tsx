@@ -1,47 +1,45 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import Image from "next/image";
 import Head from "next/head";
 
-
-
 type Lawyer = {
-  id: number
-  name: string
-  position: string
-  email: string
-  phone: string
-  image: string
-  specialties: string[]
-  education: string[]
-  bio: string
-}
+  id: number;
+  name: string;
+  position: string;
+  email: string;
+  phone: string;
+  image: string;
+  specialties: string[];
+  education: string[];
+  bio: string;
+};
 
 const allLawyers: Lawyer[] = [
   {
     id: 1,
-    name: "Darren Gibbs",
+    name: "Timothy Gibbs",
     position: "Senior Employment Attorney",
     email: "darrengibs.morganass@outlook.com",
     phone: "(555) 123-4567",
-    image: "/images/man5.jpg",
+    image: "/images/timothy.png",
     specialties: ["Employment Law", "Workplace Disputes"],
     education: ["J.D., Harvard Law School", "B.A., Yale University"],
     bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
   },
-  // {
-  //   id: 2,
-  //   name: "Rebecca Martinez",
-  //   position: "Corporate and Business Lawyer",
-  //   email: "rebecca@morganassociates.com",
-  //   phone: "(555) 123-4568",
-  //   image: "/images/man4.jpg",
-  //   specialties: ["Business Law", "Contracts", "Mergers & Acquisitions"],
-  //   education: ["J.D., Stanford Law School", "B.S., University of Michigan"],
-  //   bio: "Rebecca provides strategic legal guidance to businesses in complex transactions.",
-  // },
+  {
+    id: 2,
+    name: "Rebecca Boodhoo",
+    position: "Corporate and Business Lawyer",
+    email: "rebecca@morganassociates.com",
+    phone: "(555) 123-4568",
+    image: "/images/boodhoo.png",
+    specialties: ["Business Law", "Contracts", "Mergers & Acquisitions"],
+    education: ["J.D., Stanford Law School", "B.S., University of Michigan"],
+    bio: "Rebecca provides strategic legal guidance to businesses in complex transactions.",
+  },
   {
     id: 4,
     name: "Anthony Shaw",
@@ -50,7 +48,10 @@ const allLawyers: Lawyer[] = [
     phone: "(555) 123-4570",
     image: "/images/man4.jpg",
     specialties: ["Employment Law", "HR Compliance"],
-    education: ["J.D., University of Chicago Law School", "B.A., Northwestern University"],
+    education: [
+      "J.D., University of Chicago Law School",
+      "B.A., Northwestern University",
+    ],
     bio: "Anthony helps companies and employees navigate complex employment matters.",
   },
   {
@@ -83,7 +84,10 @@ const allLawyers: Lawyer[] = [
     phone: "(416) 555-9876",
     image: "/images/woman2.jpg",
     specialties: ["Real Estate", "Property and Conveyance", "Commercial Law"],
-    education: ["J.D., University of Toronto Faculty of Law", "B.A., McGill University"],
+    education: [
+      "J.D., University of Toronto Faculty of Law",
+      "B.A., McGill University",
+    ],
     bio: "Samantha has extensive experience handling residential and commercial property transactions across Ontario.",
   },
   {
@@ -94,7 +98,10 @@ const allLawyers: Lawyer[] = [
     phone: "(905) 555-2233",
     image: "/images/randy.png",
     specialties: ["Corporate", "Real Estate", "Commercial Law"],
-    education: ["J.D., Osgoode Hall Law School", "B.Com., University of Ottawa"],
+    education: [
+      "J.D., Osgoode Hall Law School",
+      "B.Com., University of Ottawa",
+    ],
     bio: "Daniel advises corporate clients on mergers, acquisitions, and high-value property deals.",
   },
   {
@@ -116,7 +123,10 @@ const allLawyers: Lawyer[] = [
     phone: "(289) 555-1122",
     image: "/images/man111.jpg",
     specialties: ["Banking", "Insurance", "Debt Recovery"],
-    education: ["J.D., University of British Columbia", "B.A., University of Calgary"],
+    education: [
+      "J.D., University of British Columbia",
+      "B.A., University of Calgary",
+    ],
     bio: "Omar represents financial institutions and insurers in regulatory and dispute matters across Ontario.",
   },
   {
@@ -130,17 +140,20 @@ const allLawyers: Lawyer[] = [
     education: ["LL.M., University of Ottawa", "LL.B., Université de Montréal"],
     bio: "Isabelle has resolved hundreds of business and civil disputes through strategic arbitration and negotiation.",
   },
-  // {
-  //   id: 11,
-  //   name: "David Chin",
-  //   position: "Litigation & Corporate Advisor",
-  //   email: "david.chin@winstonlaw.ca",
-  //   phone: "(519) 555-3020",
-  //   image: "/images/man9.jpg",
-  //   specialties: ["Litigation", "Corporate", "Arbitration"],
-  //   education: ["J.D., University of Alberta", "B.Sc., Simon Fraser University"],
-  //   bio: "David offers strategic corporate litigation support for businesses navigating disputes and restructuring.",
-  // },
+  {
+    id: 11,
+    name: "David Beaudie",
+    position: "Litigation & Corporate Advisor",
+    email: "david.chin@winstonlaw.ca",
+    phone: "(519) 555-3020",
+    image: "/images/beaudie.png",
+    specialties: ["Litigation", "Corporate", "Arbitration"],
+    education: [
+      "J.D., University of Alberta",
+      "B.Sc., Simon Fraser University",
+    ],
+    bio: "David offers strategic corporate litigation support for businesses navigating disputes and restructuring.",
+  },
   {
     id: 12,
     name: "Michael Zhou",
@@ -152,33 +165,124 @@ const allLawyers: Lawyer[] = [
     education: ["J.D., Dalhousie University", "B.A., University of Manitoba"],
     bio: "Michael serves corporate clients in commercial litigation and insurance defense cases province-wide.",
   },
+  {
+    id: 13,
+    name: "Bruce Morgan",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/bruce.png",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 14,
+    name: "Adam ",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/adam.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 15,
+    name: "Carina ",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/carina.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 16,
+    name: "Jason",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/jason.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 17,
+    name: "Steven ",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/steven.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 18,
+    name: "Laura Ashwood",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/laura_ashwood.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 19,
+    name: "Jensen Brehaut",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/jensen_brehaut.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
+  {
+    id: 20,
+    name: "Jalissa Boucher",
+    position: "Senior Employment Attorney",
+    email: "darrengibs.morganass@outlook.com",
+    phone: "(555) 123-4567",
+    image: "/images/jalissa_boucher.jpg",
+    specialties: ["Employment Law", "Workplace Disputes"],
+    education: ["J.D., Harvard Law School", "B.A., Yale University"],
+    bio: "Darren specializes in employment litigation, wrongful termination, and workplace rights.",
+  },
 ];
 
 const uniqueSpecialties = Array.from(
   new Set(allLawyers.flatMap((lawyer) => lawyer.specialties))
-)
+);
 
 export default function LawyersPage() {
-  const [selectedSpecialty, setSelectedSpecialty] = useState("All")
-  const [selectedLawyer, setSelectedLawyer] = useState<Lawyer | null>(null)
+  const [selectedSpecialty, setSelectedSpecialty] = useState("All");
+  const [selectedLawyer, setSelectedLawyer] = useState<Lawyer | null>(null);
+  const detailRef = useRef<HTMLDivElement | null>(null);
 
   const filteredLawyers =
     selectedSpecialty === "All"
       ? allLawyers
       : allLawyers.filter((lawyer) =>
           lawyer.specialties.includes(selectedSpecialty)
-        )
+        );
 
   return (
     <>
-
-    <Head>
+      <Head>
         <title>Our Attorneys</title>
-        <meta name="description" content="Meet our team of experienced attorneys at Winston & Co., specializing in various areas of law to serve your legal needs." />
+        <meta
+          name="description"
+          content="Meet our team of experienced attorneys at Winston & Co., specializing in various areas of law to serve your legal needs."
+        />
       </Head>
 
-           {/* Hero Section */}
-        <section
+      {/* Hero Section */}
+      <section
         className="relative bg-cover bg-center h-[500px] md:h-[750px] lg:h-screen"
         style={{ backgroundImage: `url('/images/court.jpg')` }}
       >
@@ -193,129 +297,133 @@ export default function LawyersPage() {
               the leading law firms in Canada.
             </h1>
             <p className="text-xs mb-8 font-nespresso">
-              One of Canada&apos;s prominent legal firms is Winston & Co. Since 2000,
-              the only purpose of our existence has been to provide high-quality
-              legal services to clients all over the world. Winston & Co. is
-              committed to providing business clients, including both people and
-              governmental organizations, with thoughtful legal solutions that
-              cut across disciplines, industries, and sectors.
+              One of Canada&apos;s prominent legal firms is Winston & Co. Since
+              2000, the only purpose of our existence has been to provide
+              high-quality legal services to clients all over the world. Winston
+              & Co. is committed to providing business clients, including both
+              people and governmental organizations, with thoughtful legal
+              solutions that cut across disciplines, industries, and sectors.
             </p>
           </div>
         </div>
       </section>
-    
-    <div className="min-h-screen p-6 max-w-7xl mx-auto">
-      <div className="flex justify-between items-center flex-wrap mb-6 gap-4">
-        <h1 className="text-3xl font-bold">Our Attorneys</h1>
-        <select
-          className="border border-gray-300 rounded-md px-4 py-2"
-          value={selectedSpecialty}
-          onChange={(e) => {
-            setSelectedSpecialty(e.target.value)
-            setSelectedLawyer(null)
-          }}
-        >
-          <option value="All">All Specialties</option>
-          {uniqueSpecialties.map((specialty) => (
-            <option key={specialty} value={specialty}>
-              {specialty}
-            </option>
-          ))}
-        </select>
-      </div>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {filteredLawyers.map((lawyer) => (
-          <div
-            key={lawyer.id}
-            onClick={() => setSelectedLawyer(lawyer)}
-            className={`cursor-pointer rounded-xl overflow-hidden border ${
-              selectedLawyer?.id === lawyer.id
-                ? "ring-2 ring-madder"
-                : "hover:shadow-md"
-            }`}
+      <div className="min-h-screen p-6 max-w-7xl mx-auto">
+        <div className="flex justify-between items-center flex-wrap mb-6 gap-4">
+          <h1 className="text-3xl font-bold">Our Attorneys</h1>
+          <select
+            className="border border-gray-300 rounded-md px-4 py-2"
+            value={selectedSpecialty}
+            onChange={(e) => {
+              setSelectedSpecialty(e.target.value);
+              setSelectedLawyer(null);
+            }}
           >
-            <div className="relative h-96 w-full">
-              <Image
-                src={lawyer.image}
-                alt={lawyer.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-4">
-              <h2 className="text-xl font-semibold">{lawyer.name}</h2>
-              <p className="text-sm text-gray-600">{lawyer.position}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+            <option value="All">All Specialties</option>
+            {uniqueSpecialties.map((specialty) => (
+              <option key={specialty} value={specialty}>
+                {specialty}
+              </option>
+            ))}
+          </select>
+        </div>
 
-      {/* Lawyer Details */}
-      {selectedLawyer && (
-        <motion.div
-          layout
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4 }}
-          className="mt-12 bg-gray-50 p-6 rounded-lg border"
-        >
-          <div className="flex flex-col md:flex-row gap-6">
-            <div className="relative h-96 w-full md:w-1/3">
-              <Image
-                src={selectedLawyer.image}
-                alt={selectedLawyer.name}
-                fill
-                className="object-cover rounded-md"
-              />
+        <div className="grid md:grid-cols-3 gap-6">
+          {filteredLawyers.map((lawyer) => (
+            <div
+              key={lawyer.id}
+              onClick={() => {
+                setSelectedLawyer(lawyer);
+                setTimeout(() => {
+                  detailRef.current?.scrollIntoView({ behavior: "smooth" });
+                }, 100); 
+              }}
+              className={`cursor-pointer rounded-xl overflow-hidden border ${
+                selectedLawyer?.id === lawyer.id
+                  ? "ring-2 ring-madder"
+                  : "hover:shadow-md"
+              }`}
+            >
+              <div className="relative h-96 w-full">
+                <Image
+                  src={lawyer.image}
+                  alt={lawyer.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-4">
+                <h2 className="text-xl font-semibold">{lawyer.name}</h2>
+                <p className="text-sm text-gray-600">{lawyer.position}</p>
+              </div>
             </div>
-            <div className="md:w-2/3">
-              <h3 className="text-2xl font-bold">{selectedLawyer.name}</h3>
-              <p className="text-madder text-lg">
-                {selectedLawyer.position}
-              </p>
-              <p className="text-gray-700 mt-2">{selectedLawyer.bio}</p>
+          ))}
+        </div>
 
-              <div className="mt-4">
-                <h4 className="font-semibold">Specialties</h4>
-                <div className="flex gap-2 flex-wrap mt-1">
-                  {selectedLawyer.specialties.map((spec) => (
-                    <span
-                      key={spec}
-                      className="bg-white border px-3 py-1 text-sm rounded-full"
+        {/* Lawyer Details */}
+        {selectedLawyer && (
+          <motion.div
+            ref={detailRef}
+            layout
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+            className="mt-12 bg-gray-50 p-6 rounded-lg border"
+          >
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="relative h-96 w-full md:w-1/3">
+                <Image
+                  src={selectedLawyer.image}
+                  alt={selectedLawyer.name}
+                  fill
+                  className="object-cover rounded-md"
+                />
+              </div>
+              <div className="md:w-2/3">
+                <h3 className="text-2xl font-bold">{selectedLawyer.name}</h3>
+                <p className="text-madder text-lg">{selectedLawyer.position}</p>
+                <p className="text-gray-700 mt-2">{selectedLawyer.bio}</p>
+
+                <div className="mt-4">
+                  <h4 className="font-semibold">Specialties</h4>
+                  <div className="flex gap-2 flex-wrap mt-1">
+                    {selectedLawyer.specialties.map((spec) => (
+                      <span
+                        key={spec}
+                        className="bg-white border px-3 py-1 text-sm rounded-full"
+                      >
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-4">
+                  <h4 className="font-semibold">Education</h4>
+                  <ul className="list-disc pl-5 text-sm text-gray-800">
+                    {selectedLawyer.education.map((edu) => (
+                      <li key={edu}>{edu}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mt-4">
+                  <p>
+                    📧{" "}
+                    <a
+                      href={`mailto:${selectedLawyer.email}`}
+                      className="text-blue-600 underline"
                     >
-                      {spec}
-                    </span>
-                  ))}
+                      {selectedLawyer.email}
+                    </a>
+                  </p>
+                  <p>📞 {selectedLawyer.phone}</p>
                 </div>
               </div>
-
-              <div className="mt-4">
-                <h4 className="font-semibold">Education</h4>
-                <ul className="list-disc pl-5 text-sm text-gray-800">
-                  {selectedLawyer.education.map((edu) => (
-                    <li key={edu}>{edu}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="mt-4">
-                <p>
-                  📧{" "}
-                  <a
-                    href={`mailto:${selectedLawyer.email}`}
-                    className="text-blue-600 underline"
-                  >
-                    {selectedLawyer.email}
-                  </a>
-                </p>
-                <p>📞 {selectedLawyer.phone}</p>
-              </div>
             </div>
-          </div>
-        </motion.div>
-      )}
-    </div>
-    </> 
-  )
+          </motion.div>
+        )}
+      </div>
+    </>
+  );
 }
