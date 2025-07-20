@@ -232,7 +232,7 @@ const ContactPage = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: translations.info.emailTitle,
-      content: "info@winstonco.com"
+      content: "info@winstoncofirm.com"
     },
     {
       icon: <Clock className="h-6 w-6" />,
