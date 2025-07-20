@@ -108,30 +108,6 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Our Timeline */}
-      <section className="py-20 bg-gray-100 px-6 md:px-16 lg:px-32">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-12 text-center">A Legacy of Excellence</h2>
-          <div className="border-l-4 border-madder pl-6 space-y-10">
-            <div>
-              <h3 className="text-xl font-semibold">2000</h3>
-              <p>Founded with a mission to champion employment law and client advocacy.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">2008</h3>
-              <p>Expanded practice nationally to cover broader corporate and labor law issues.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">2015</h3>
-              <p>Recognized as a top-tier law firm in workplace litigation and advisory services.</p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold">2024</h3>
-              <p>Launched cross-functional teams to support a diverse client base across industries.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="py-16 bg-gray-50">
   <div className="container mx-auto px-4">
@@ -167,13 +143,13 @@ export default function AboutUs() {
             year: '2012',
             title: 'New Headquarters',
             description: 'Moved into a state-of-the-art headquarters in downtown Toronto, boosting collaboration and culture.',
-            image: '/images/history-2012.jpg',
+            image: '/images/history3.jpg',
           },
           {
             year: '2024',
             title: 'Innovation & Sustainability',
             description: 'Launched cross-functional teams to support a diverse client base across industries.',
-            image: '/images/history-2024.jpg',
+            image: '/images/history4.jpg',
           },
         ].map((item, i) => (
           <div

@@ -196,11 +196,11 @@ export default function ProBonoPage() {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-blue-900 mb-2">Need Pro Bono Legal Support?</h2>
+          <h2 className="text-2xl font-bold text-madder mb-2">Need Pro Bono Legal Support?</h2>
           <p className="text-gray-700 max-w-xl mx-auto mb-6">
             If you're a charity, non-profit, or individual in Ontario in need of legal help but unable to afford it, we want to hear from you.
           </p>
-          <Button size="lg" className="bg-blue-800 hover:bg-blue-900 text-white rounded-full px-8 py-3">
+          <Button size="lg" className="bg-madder hover:bg-blue-900 text-white rounded-full px-8 py-3">
             Get in Touch
           </Button>
         </div>
