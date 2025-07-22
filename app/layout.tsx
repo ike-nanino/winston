@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 // app/layout.tsx
-export const metadata = {
+export const metadata: Metadata = {
   title: {
     default: 'Winston & Co. | Canadian Law Firm',
     template: '%s | Winston & Co.',
@@ -28,6 +28,10 @@ export const metadata = {
     'Winston & Co. is a national law firm in Canada specializing in employment law and comprehensive legal services for businesses and individuals.',
   keywords: [
     'Winston and Co',
+    'Winston & Co',
+    'Winston & Co Law Firm',
+    'Winston & Co Law Firm in Canada',
+    'Law Firm in Canada',
     'Canadian Law Firm',
     'Employment Law Canada',
     'Business lawyer Canada',
@@ -49,12 +53,23 @@ export const metadata = {
     'Legal Counsel',
 
   ],
-  metadataBase: new URL('https://yourdomain.com'),
+  metadataBase: new URL('https://winstoncofirm.com'),
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-32x32.png",
+    apple: "/apple-touch-icon.png",
+    other: [
+      {
+        rel: "icon",
+        url: "/favicon-16x16.png",
+      },
+    ],
+  },
   openGraph: {
-    title: 'Winston & Co. | Trusted Canadian Law Firm',
+    title: 'Winston & Co. | Canadian Law Firm',
     description:
       'Winston & Co. offers expert legal services across Canada, specializing in employment law and corporate legal counsel.',
-    url: 'https://yourdomain.com',
+    url: 'https://winstoncofirm.com',
     siteName: 'Winston & Co.',
     images: [
       {
@@ -67,14 +82,10 @@ export const metadata = {
     type: 'website',
     locale: 'en_CA',
   },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Winston & Co. | Trusted Canadian Law Firm',
-    description:
-      'Expert employment and corporate legal services across Canada.',
-    images: ['/images/twitter-cover.jpg'],
-    site: '@YourFirmHandle',
-  },
+  authors: [
+    { name: "Winston & Co.", url: "https://www.winstoncofirm.com" },
+  ],
+  creator: "Winston & Co.",
   robots: {
     index: true,
     follow: true,
