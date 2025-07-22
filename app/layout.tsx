@@ -54,6 +54,9 @@ export const metadata: Metadata = {
 
   ],
   metadataBase: new URL('https://winstoncofirm.com'),
+  alternates: {
+    canonical: "https://www.winstoncofirm.com",
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
